@@ -23,7 +23,7 @@ class LessonsController < ApplicationController
 
   
   def current_course
-    @current_course ||= Course.find(params[:id])
+    @current_course ||= current_lesson.section.course
   end
 
 end
